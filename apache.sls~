@@ -1,0 +1,3 @@
+apache:
+   service.start:
+        - apache2
