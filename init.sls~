@@ -1,5 +1,0 @@
-base:
- '*':
-   service.running:
-    - require:
-      - pkg: apache2
