@@ -16,8 +16,8 @@ copy:
 
 copy1:
   file.copy:
-    - name: /home/superuser/salt/base/test/hello4
-    - source: /home/superuser/salt/base/test/hello
+    - name: /tmp/test/hello4
+    - source: /tmp/test/hello
     - user: superuser
     - group: superuser
     - mode: 755
@@ -25,7 +25,7 @@ copy1:
 
 hosts entry:
   host.present:
-    - ip: 192.168.0.41
+    - ip: 192.168.0.1
     - names:
       - server1.test 
       - server1
@@ -44,12 +44,12 @@ cmd.run2:
 
 anydeskpkg:
   pkg.installed:
-    - source: salt://home/superuser/salt/anydesk.deb  
+    - source: salt://tmp/anydesk.deb  
 #anydesk
 #  pkg.removed:
 #   
 cmd.run3:
   cmd.run:
-    - name: dpkg -i "/home/superuser/Downloads/anydesk_2.9.3-1_amd64(1).deb"
+    - name: dpkg -i "/tmp/anydesk_2.9.3-1_amd64(1).deb"
 
 
