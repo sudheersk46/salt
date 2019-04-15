@@ -9,8 +9,8 @@ copy:
   file.managed:
     - name: /tmp/hello2
     - source: salt://test/hello3
-    - user: superuser
-    - group: superuser
+    - user: user
+    - group: user
     - mode: 777
 
 
@@ -18,8 +18,8 @@ copy1:
   file.copy:
     - name: /tmp/test/hello4
     - source: /tmp/test/hello
-    - user: superuser
-    - group: superuser
+    - user: user
+    - group: user
     - mode: 755
 
 
